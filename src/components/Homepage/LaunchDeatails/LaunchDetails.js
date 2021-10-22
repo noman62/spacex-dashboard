@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 
 const LaunchDetails = () => {
+
     const { id } = useParams();
     const [launchDetail, setLaunchDetail] = useState({});
     const [rocket, setRocket] = useState({});
@@ -40,12 +41,9 @@ const LaunchDetails = () => {
                         <h1 class="mx-auto mb-1 text-md lg:text-md"><span className="font-semibold">rocket Name: </span>{rocketInfo.name}</h1>
                         <p class="mx-auto mb-1 text-sm   lg:text-md"><span className="font-semibold">flight_number: </span>{launchDetail.flight_number}</p>
                         <p class="mx-auto mb-1 text-sm  lg:text-md"><span className="font-semibold">Launch-date: </span>{launchDetail.date_local}</p>
-
                         <p class="mx-auto text-base leading-relaxed text-gray-600">{launchDetail.details}</p>
                         <a href={launchInfo.article} className=" underline hover:underline focus:underline" title="article">{launchInfo.article}</a>
                         <a href={launchInfo.wikipedia} className=" underline hover:underline focus:underline" title="article">{launchInfo.wikipedia}</a>
-
-
                     </div>
                 </div>
             </div>
@@ -54,14 +52,4 @@ const LaunchDetails = () => {
 };
 
 export default LaunchDetails;
-{/* <div>
-    <p>Name:{launchDetail.name}</p>
-    <p>date:{launchDetail.date_local}</p>
-    <p>flight_number:{launchDetail.flight_number}</p>
-    <p>Details:{launchDetail.details}</p>
-    <p>{launchInfo.article}</p>
-    <p>{launchInfo.wikipedia}</p>
-    <p>rocket:{rocketInfo.name}</p>
 
-
-</div> */}

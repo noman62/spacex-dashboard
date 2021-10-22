@@ -2,12 +2,14 @@ import React from 'react';
 import { useHistory } from 'react-router';
 
 const UpcomingLaunches = (props) => {
+
     const { name, flight_number, details, date_utc, id, links } = props.launch;
     const { small } = links.patch;
     const history = useHistory();
     const singleLaunch = (id) => {
         history.push(`/launches/upcoming/${id}`);
     }
+    
     return (
         <div>
             <div class="p-6">

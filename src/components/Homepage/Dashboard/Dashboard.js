@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import UpcomingLaunches from '../UpcomingLaunches/UpcomingLaunches';
 
 const Dashboard = () => {
+
     const [launches, setLaunches] = useState([]);
     useEffect(() => {
         fetch('https://api.spacexdata.com/v4/launches')
@@ -11,6 +12,7 @@ const Dashboard = () => {
                 setLaunches(data);
             })
     }, [])
+    
     return (
         <div>
             <Navbar/>
